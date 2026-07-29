@@ -62,20 +62,22 @@ export interface SplatLayer {
 }
 
 export const DEFAULT_PARAMS: SplatParams = {
+  // Highest visual fidelity out of the box — tuned for portraits & detailed scenes.
+  // Tighter splat size preserves fine edges/texture; denser SOTA budget + LDI + edges.
   sampleStep: 1,
   depthMode: "metric",
   depthEngine: "enhanced",
-  depthScale: 1.4,
-  splatSize: 1.45,
-  opacity: 0.95,
-  alphaThreshold: 8,
+  depthScale: 1.25,
+  splatSize: 1.05,
+  opacity: 0.92,
+  alphaThreshold: 6,
   invertDepth: false,
-  colorBoost: 1.15,
-  softFocus: 0.12,
+  colorBoost: 1.08,
+  softFocus: 0.08,
   anisotropic: true,
-  normalStrength: 1.15,
-  confidenceCull: 0.02,
-  fovDeg: 52,
+  normalStrength: 1.2,
+  confidenceCull: 0.012,
+  fovDeg: 50,
   quality: "sota",
   layeredDepth: true,
   edgeDensify: true,
