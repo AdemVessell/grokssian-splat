@@ -91,7 +91,7 @@ export const useSceneStore = create<SceneState>((set, get) => ({
       layerName = name ?? "Image";
     } else {
       dataUrl = await fileToDataUrl(file);
-      layerName = name ?? file.name.replace(/\.[^.]+$/, "") || "Image";
+      layerName = name ?? (file.name.replace(/\.[^.]+$/, "") || "Image");
     }
     const params = { ...get().defaultParams };
     const thumbnail = await makeThumbnail(dataUrl);

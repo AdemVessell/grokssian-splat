@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
-    "build": "tsc -b && vite build",
+    "build": "tsc --noEmit && vite build",
+    "build:pages": "tsc --noEmit && GITHUB_PAGES=true vite build",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
     "typecheck": "tsc --noEmit"
   },
@@ -29,5 +30,26 @@
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.2"
-  }
+  },
+  "description": "SplatForge \u2014 single-image \u2192 3D Gaussian splat scenes in the browser",
+  "homepage": "https://grokssian-splat.grok.me/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdemVessell/grokssian-splat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdemVessell/grokssian-splat/issues"
+  },
+  "keywords": [
+    "gaussian-splatting",
+    "3d",
+    "webgl",
+    "threejs",
+    "react",
+    "vite",
+    "splatforge",
+    "depth",
+    "client-side"
+  ],
+  "license": "MIT"
 }
