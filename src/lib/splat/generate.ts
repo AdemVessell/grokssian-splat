@@ -25,9 +25,10 @@ function qualityConfig(quality: QualityPreset | undefined, sampleStep: number) {
     case "draft":
       return { maxDim: 280, step: Math.max(sampleStep, 4), maxSplats: 12_000 };
     case "ultra":
-      return { maxDim: 560, step: Math.max(1, sampleStep), maxSplats: 55_000 };
+      return { maxDim: 640, step: Math.max(1, sampleStep), maxSplats: 70_000 };
     case "sota":
-      return { maxDim: 480, step: Math.max(1, Math.min(sampleStep, 2)), maxSplats: 42_000 };
+      // Default path: denser sampling + higher resolution for portrait / architecture detail
+      return { maxDim: 560, step: Math.max(1, Math.min(sampleStep, 2)), maxSplats: 58_000 };
     case "balanced":
     default:
       return { maxDim: 400, step: Math.max(1, Math.round(sampleStep)), maxSplats: 28_000 };
@@ -226,6 +227,7 @@ export async function generateSplatCloud(
         );
         if (!anisotropic) normal = [0, 0, 1];
 
+        // Bake relative scales; live size from uSize
         let sc = anisotropic
           ? anisotropicScalesFromNormalAndDepth(
               normal,
