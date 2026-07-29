@@ -1,23 +1,34 @@
-# Grokssian Splat (SplatForge)
+# SplatForge (Grokssian Splat)
 
-**Single-image → 3D Gaussian splat scenes** — client-side, SOTA-mode pipeline.
+**Single-image → 3D Gaussian splat scenes** — fully client-side.
 
-Built with Grok Build Mode.
+## Features
 
-## What it is
-
-SplatForge turns a photo into an orbitable 3D Gaussian splat cloud in the browser:
-
-- **Depth engines** — heuristic / enhanced multi-scale / Neural (Depth Anything V2)
+- **Depth engines** — Heuristic & Enhanced multi-scale structure depth
 - **SOTA Mode** — metric unproject, anisotropic Gaussians, LDI back-layers, edge densify
-- **Multi-view fuse** — stereo / triptych / orbit rigs
-- **Export** — PLY download
+- **Auto-framing** — clouds normalized + camera fit for walkable orbit
+- **PLY export**
+- **Try demo** — synthetic room scene for instant QA
 
-Stack: TanStack Start + React 19 + R3F/Three + Zustand + Tailwind.
+## Stack
 
-## Status
+- Vite + React 19 + TypeScript
+- React Three Fiber / Three.js
+- Zustand
+- Tailwind CSS v4
 
-Repo initialized. Full source push pending from the Grok Build workspace.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:8080 — drop an image or hit **Try demo**.
+
+## Defaults
+
+SOTA · Enhanced · Metric · Layered LDI · Edge densify
 
 ## Owner
 
