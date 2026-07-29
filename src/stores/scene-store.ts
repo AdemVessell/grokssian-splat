@@ -141,7 +141,7 @@ export const useSceneStore = create<SceneState>((set, get) => ({
 
   runDemo: async () => {
     const dataUrl = createDemoImageDataUrl();
-    await get().addImage(dataUrl, "SOTA demo room");
+    await get().addImage(dataUrl, "Sunlit lounge");
   },
 
   removeLayer: (id) => {
