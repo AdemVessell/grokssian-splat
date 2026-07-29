@@ -1,0 +1,33 @@
+{
+  "name": "grokssian-splat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 8080",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 8080",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.487.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.2.0",
+    "three": "^0.175.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/three": "^0.175.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+  }
+}
