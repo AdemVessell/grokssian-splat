@@ -6,4 +6,5 @@ dist
 .env.*
 .vite
 *.log
-screenshots
+.idea
+.vscode
